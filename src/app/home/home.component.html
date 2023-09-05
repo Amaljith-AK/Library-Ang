@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="margin-top: -48px;">Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="margin-left: 20px;">
+            <li class="nav-item active" style="list-style-type: none;">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href="#">Books</a>
+            </li>
+            <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link" href="#">Account</a>
+            </li>
+            <li class="nav-item" style="list-style-type: none;">
+                <a class="nav-link text-danger" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <!-- <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" style="background-color: darkgreen;margin-top: -15px; height: 25px;padding: 3px;" type="submit">Search</button>
+    </form> -->
+</nav>
+
+<!-- <div class="row mt-2">
+    <div class="card col-md-3 m-auto" style="width: 18rem;" *ngFor="let book of books">
+        <img class="card-img-top" src="{{book.image}}" style="height: 300px;width:100%;">
+        <div class="card-body" style="width: 100%;height: 100px;">
+            <h5 class="card-title" style="height: 45px;">{{book.title}}</h5>
+            <p class="card-text" style="font-size: 0.9em;">{{book.author}}</p>
+        </div>
+        <div class="card-body">
+            <button id="{{book.id}}" class="card-link btn btn-secondary text-center w-100" (click)="borrow($event)">Borrow</button>
+
+        </div>
+
+        
+
+    </div>
+</div> -->
+
+
+
+<section id="featured-books" class="py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="section-header align-center">
+                    <div class="title">
+                        <span>Some quality items</span>
+                    </div>
+                    <h2 class="section-title">Featured Books</h2>
+                </div>
+
+                <div class="product-list" data-aos="fade-up">
+                    <div class="row">
+
+                        <div class="col-md-3" *ngFor="let book of books">
+                            <div class="product-item">
+                                <figure class="product-style">
+                                    <img src="{{book.image}}" alt="Books" class="product-item" style="height: 300px !important;">
+                                    <button id="{{book.id}}" type="button" class="add-to-cart" data-product-tile="add-to-cart" (click)="borrow($event)">Borrow</button>
+                                </figure>
+                                <figcaption>
+                                    <h3>{{book.title}}</h3>
+                                    <span>{{book.author}}</span>
+                                    <div class="item-price">{{book.genre}}</div>
+                                </figcaption>
+                            </div>
+                        </div>
+
+                       
+                    </div><!--ft-books-slider-->
+                </div><!--grid-->
+
+
+            </div><!--inner-content-->
+        </div>
+        <section id="quotation" class="align-center pb-5 mb-5">
+            <div class="inner-content">
+                <h2 class="section-title divider">Quote of the day</h2>
+                <blockquote data-aos="fade-up">
+                    <q>“The more that you read, the more things you will know. The more that you learn, the more places
+                        you’ll go.”</q>
+                    <div class="author-name">Dr. Seuss</div>
+                </blockquote>
+            </div>
+        </section>

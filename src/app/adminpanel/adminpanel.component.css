@@ -1,0 +1,49 @@
+
+h1{
+    width: Auto;
+    background-color: rgb(33, 19, 122);
+    color: aliceblue;
+    margin-left: 10px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-left{
+    height: 100vh;
+    background-color: rgb(33, 19, 122);
+    color: aliceblue;
+    position: fixed;
+}
+
+
+.nav-left a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.3em;
+    display: flex;
+    font-weight: 500;
+    transition: .3s ease-in;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 16px 8px;
+
+}
+button{
+    color: whitesmoke;
+    font-size: 1.3em;
+    margin-left: 14px;
+    margin-top: 10px;
+}
+
+.nav-left a:hover{
+    background: rgb(16, 7, 74);
+    width: 100%;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.display-data{
+    margin-left: 375px;
+}

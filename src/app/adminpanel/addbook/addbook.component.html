@@ -1,0 +1,26 @@
+<div class="container">
+    
+    <h2 style="font-weight: 700;font-size: 1.2em;margin-top: 30px;color: rgb(9, 9, 81);">Add Book </h2>
+    <div class="jumbotron">
+        <form action="" [formGroup]="addForm" (ngSubmit)="addBook()">
+            <input type="text" formControlName="title" placeholder="Book Title" class="mt-4 form-control">
+            <div class="alert alert-danger" *ngIf="addForm.get('title')?.invalid && addForm.get('title')?.touched">Enter book title</div>
+
+            <input type="text" formControlName="author" placeholder="Author Name" class="mt-4 form-control">
+            <div class="alert alert-danger" *ngIf="addForm.get('author')?.invalid && addForm.get('author')?.touched">Enter author name</div>
+
+            <input type="number" formControlName="isbn" placeholder="ISBN code" class="mt-4 form-control">
+            <div class="alert alert-danger" *ngIf="addForm.get('isbn')?.invalid && addForm.get('isbn')?.touched">Enter ISBN code of book</div>
+           
+            <input type="text" formControlName="genre" placeholder="Genre" class="mt-4 form-control">
+            <div class="alert alert-danger" *ngIf="addForm.get('genre')?.invalid && addForm.get('genre')?.touched">Enter genre of book</div>
+            
+            <input type="file" (change)="addProImage($event)" class="form-control mt-4 ">
+            
+            <button class="btn btn-success w-100 mt-4" [disabled]="addForm.invalid">Add Book</button>
+        </form>
+    </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script></div>
